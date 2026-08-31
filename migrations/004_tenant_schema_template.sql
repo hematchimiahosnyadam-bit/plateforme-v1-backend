@@ -1,4 +1,4 @@
--- Permet au Super Admin de choisir, à la création d'une entreprise (et
+-- Permet au Super Admin de choisir, à la création d'une emigrations/001_tenant_schema_template.sqlntreprise (et
 -- modifiable ensuite), quels modules du Dashboard Admin Entreprise sont
 -- activés. Par défaut, tout est activé — le Super Admin décoche ce dont
 -- il ne veut pas.
