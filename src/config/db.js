@@ -12,6 +12,9 @@ const pool = new Pool({
   database: process.env.DB_NAME,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
+  // Neon (et la plupart des bases gérées) exigent une connexion chiffrée.
+  // Activé uniquement si DB_SSL=true est défini (jamais en local par défaut).
+  ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : false,
   max: 20, // connexions simultanées max dans le pool
   idleTimeoutMillis: 30000,
 });
