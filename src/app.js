@@ -9,7 +9,6 @@ const entrepriseRoutes = require('./routes/entrepriseRoutes');
 const monEntrepriseRoutes = require('./routes/monEntrepriseRoutes');
 const monProfilRoutes = require('./routes/monProfilRoutes');
 const superAdminProfilRoutes = require('./routes/superAdminProfilRoutes');
-const initRoutes = require('./routes/initRoutes');
 const produitRoutes = require('./routes/produitRoutes');
 const categorieRoutes = require('./routes/categorieRoutes');
 const boutiquePubliqueRoutes = require('./routes/boutiquePubliqueRoutes');
@@ -58,7 +57,6 @@ app.use('/api/mon-entreprise/contenu', contenuRoutes);
 app.use('/api/mon-entreprise/medias', mediaRoutes);
 app.use('/api/mon-profil', monProfilRoutes);
 app.use('/api/super-admin/mon-profil', superAdminProfilRoutes);
-app.use('/api/_init', initRoutes);
 
 // 404 pour toute route inconnue
 app.use((req, res) => res.status(404).json({ erreur: 'Route introuvable' }));
